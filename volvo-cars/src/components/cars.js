@@ -39,11 +39,11 @@ function Cars() {
                       <span>{car.modelType}</span>
                       <img src={car.imageUrl} alt="failed to load" />
                           <div className="btn-div">
-                          <A href={`/Learn/${car.id}`} onClick={() => setShowMenu(!showMenu)}>
+                          <A href={`/Learn/${car.id}`}>
                             <span>Learn</span>
                                 <img className="blue-arrows" src={blueArrow} alt="failed to load"/> 
                                 </A> 
-                          <A href={`/Shop/${car.id}`} onClick={() => setShowMenu(!showMenu)}>
+                          <A href={`/Shop/${car.id}`}>
                               <span>Shop</span>
                                 <img className="blue-arrows" src={blueArrow} alt="failed to load"/> 
                                 </A>

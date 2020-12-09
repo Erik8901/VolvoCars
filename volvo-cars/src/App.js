@@ -1,5 +1,5 @@
 import React, { useState, useEffect}  from 'react'
-import {useRoutes, A } from 'hookrouter';
+import {useRoutes, A} from 'hookrouter';
 
 import Cars from './components/cars'
 import Learn from './pages/Learn';
@@ -14,9 +14,9 @@ import blueArrow from './docs/chevron-small.svg'
 import pageArrows from './docs/chevron-circled.svg'
 
 const routes = {
-   '/cars': () => <Cars />,
-  '/learn': () => <Learn/>,
- '/shop*': () => <Shop />,
+   '/Cars': () => <Cars />,
+  '/Learn': () => <Learn/>,
+ '/Shop': () => <Shop />,
 }
 
 
@@ -28,12 +28,10 @@ function App() {
 
  return (
     <div className="App">
-      <h1>Volvo Cars App</h1>
+     <h1>Volvo Cars App</h1>
       <Cars />
       {page}
-      {/* <Learn/>
-      <Shop /> */}
-        <div className="pages-btns-div">
+      <div className="pages-btns-div">
           <img src={pageArrows} className="arrows-pages" style={{WebkitTransform: 'scaleX(-1)', transform: 'scaleX(-1)'}} alt="failed to load" />
           <img src={pageArrows} className="arrows-pages" alt="failed to load" />
       </div>
