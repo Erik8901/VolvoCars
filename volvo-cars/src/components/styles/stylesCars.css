@@ -3,24 +3,63 @@
   display: flex;
   flex-direction: row;
   align-content: space-evenly;
+  top: 6rem;
+  position: relative;
 }
 
 li {
   margin: 1rem;
   display: inline-block;
-  
+}
+
+.car-info-div-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-info-div-2 {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+}
+
+.car-model-type {
+  left: 0.4rem;
+  position: relative;
+  font-weight: 540;
+  color: #C9C9C9;
+}
+
+.bodyType {
+  color: #B3B2B2;
 }
 
 img {
+  margin-top: 1rem;
   position: relative;
-    width: 24vw;
-    height: 34vh;
+  width: 28rem;
+  height: 20rem;
+}
+
+
+.btn-div {
+  margin-left: 30%;
+  width: fit-content;
+  margin-top: 2rem;
+
+}
+
+A {
+  color: #1B6BBA;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 
 .blue-arrows {
   width: 3rem;
-  height: 2rem;
+  height: 1rem;
 }
 
 .arrows-pages {
