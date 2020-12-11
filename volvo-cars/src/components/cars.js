@@ -12,13 +12,16 @@ import blueArrow from '../docs/chevron-small.svg'
 function Cars() {
     const [carsList, setCarsList] = useState([]);
     
+    
     useEffect( () => { 
        fetch('api/cars.json')
             .then((res) => res.json())
             .then((data) => {
-                   // console.log('data:', data);
-                    setCarsList(data)
+                //console.log('data:', data);
+                setCarsList(data)
+                   
         })
+        
     },[]) //useEffect 1 
     
  return (
