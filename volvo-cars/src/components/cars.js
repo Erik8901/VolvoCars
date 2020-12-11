@@ -1,8 +1,10 @@
 import React, { useState, useEffect}  from 'react'
-import { useRoutes, A } from 'hookrouter';
+import { A } from 'hookrouter';
 
 //CSS
 import './styles/stylesCars.css';
+
+import Filter from './Filter'
 
 //imgs
 import blueArrow from '../docs/chevron-small.svg'
@@ -14,13 +16,14 @@ function Cars() {
        fetch('api/cars.json')
             .then((res) => res.json())
             .then((data) => {
-                    console.log('data:', data);
+                   // console.log('data:', data);
                     setCarsList(data)
         })
     },[]) //useEffect 1 
     
  return (
         <div className="cars-page">
+             <Filter cars={carsList} />
             <div className="div-cars">
                 { carsList.map((car, index) => { 
                     return <li key={index}>
