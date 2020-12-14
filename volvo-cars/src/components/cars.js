@@ -44,17 +44,19 @@ function Cars() {
     } //goBack
     
  return (
-        <div className="filter-body-div">
-            <span>Filter by Bodytype</span>
-                <div>
+        <div className="cars-page">
+            {/* <span>Filter by Bodytype</span> */}
+                <div className="filter-bar">
+                { !showBackBtn && <span className="btn-back" onClick={() => goBack()}>Go Back</span> }
+                    <div className="btn-filter-div">
                     { bodyTypes.map((body, index) => {
-                        return <li key={index}>
-                                    <div>
-                                        <span className="btn-body-type" onClick={() => sortByBodyType(body)}>{body.toUpperCase()}</span>
-                                    </div>
+                        return  <li key={index}>
+                                        <span className="btn-body-type" onClick={() => sortByBodyType(body)}>{body.charAt(0).toUpperCase() + body.slice(1)}</span>
                                 </li>
+                                
                     })}
-                    { !showBackBtn && <span className="btn-back" onClick={() => goBack()}>Back</span> }
+                    </div>
+                    
                 </div>
         
         <div className="div-cars">

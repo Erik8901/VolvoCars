@@ -7,12 +7,45 @@
   position: relative;
 }
 
+.filter-bar {
+  background: #fafafa;
+}
+
+.btn-filter-div {
+  width: 24rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-content: space-evenly;
+}
+
+.btn-body-type {
+  font-weight: 100;
+}
+
 .btn-body-type {
   cursor: pointer;
 }
 
+:hover.btn-body-type {
+  border-bottom: 2px solid #1c6bba;; /* Or whatever color you want */
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+
 .btn-back {
   cursor: pointer;
+  font-weight: 100;
+  left: 3rem;
+  position: absolute;
+  top: 1rem;
+}
+
+:hover.btn-back {
+  border-bottom: 2px solid #1c6bba;; /* Or whatever color you want */
+  text-decoration: none;
+  padding-bottom: 1rem;
 }
 
 li {
