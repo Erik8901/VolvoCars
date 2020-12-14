@@ -7,6 +7,14 @@
   position: relative;
 }
 
+.btn-body-type {
+  cursor: pointer;
+}
+
+.btn-back {
+  cursor: pointer;
+}
+
 li {
   margin: 1rem;
   display: inline-block;
