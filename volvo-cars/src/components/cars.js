@@ -12,6 +12,7 @@ function Cars() {
     const [bodyTypes, setBodyTypes] = useState([]);
     const [allCars, setAllCars] = useState([]);
     const [showBackBtn, setShowBackBtn] = useState(true);
+    const [disabled, setDisabled] = useState(true);
     
     
     useEffect( () => { 
@@ -41,7 +42,7 @@ function Cars() {
      function goBack() {
         setCarsList(allCars)
         setShowBackBtn(!showBackBtn)
-    } //goBack
+} //goBack
     
  return (
         <div className="cars-page">
