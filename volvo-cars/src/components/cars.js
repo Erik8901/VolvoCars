@@ -28,8 +28,7 @@ function Cars() {
         carsList.forEach(car => list.push(car.bodyType))
         let bodies = [...new Set(list)]
         setBodyTypes(bodies)
-     
-     },[carsList]) //useEffect 2
+    },[carsList]) //useEffect 2
      
      function sortByBodyType(body) {
         let result = carsList.filter(cars =>  { return cars.bodyType.includes(body) });
@@ -40,7 +39,7 @@ function Cars() {
      function goBack() {
         setCarsList(allCars)
         setShowBackBtn(!showBackBtn)
-} //goBack
+    } //goBack
     
  return (
         <div className="cars-page">
