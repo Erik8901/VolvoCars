@@ -12,8 +12,6 @@ function Cars() {
     const [bodyTypes, setBodyTypes] = useState([]);
     const [allCars, setAllCars] = useState([]);
     const [showBackBtn, setShowBackBtn] = useState(true);
-    const [disabled, setDisabled] = useState(true);
-    
     
     useEffect( () => { 
        fetch('api/cars.json')
@@ -36,7 +34,7 @@ function Cars() {
      function sortByBodyType(body) {
         let result = carsList.filter(cars =>  { return cars.bodyType.includes(body) });
         setCarsList(result)
-        setShowBackBtn(!showBackBtn)
+        setShowBackBtn(false)
      } //sortByBodyType
 
      function goBack() {
@@ -46,8 +44,7 @@ function Cars() {
     
  return (
         <div className="cars-page">
-            {/* <span>Filter by Bodytype</span> */}
-                <div className="filter-bar">
+            <div className="filter-bar">
                 { !showBackBtn && <span className="btn-back" onClick={() => goBack()}>Go Back</span> }
                     <div className="btn-filter-div">
                     { bodyTypes.map((body, index) => {
@@ -57,7 +54,6 @@ function Cars() {
                                 
                     })}
                     </div>
-                    
                 </div>
         
         <div className="div-cars">
